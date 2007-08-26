@@ -6,7 +6,7 @@
 %define	pdir	Device
 %define	pnam	SCSI
 Summary:	Device::SCSI - Perl module to control SCSI devices
-#Summary(pl):
+Summary(pl.UTF-8):	Device::SCSI - moduł Perla do sterowania urządzeniami SCSI
 Name:		perl-Device-SCSI
 Version:	1.003
 Release:	0.1
@@ -15,10 +15,9 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/MO/MOOLI/Device-SCSI-%{version}.tar.gz
 # Source0-md5:	6d965728811b379b11f144a2caf85d8b
+URL:		http://search.cpan.org/dist/Device-SCSI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,8 +34,19 @@ number of other helper methods that can aid in querying the device and
 debugging. Note that the goats and black candles usually required to
 solve SCSI problems will need to be provided by yourself.
 
+%description -l pl.UTF-8
+Ta biblioteka perlowa wykorzystuje obiekty Perla 5 w celu ułatwienia
+wykonywania niskopoziomowy operacji wejścia/wyjścia SCSI z poziomu
+Perla, unikając całej czarnej magii i walki z C. Zorientowany
+obiektowo interfejs pozwala aplikacji używać więcej niż jednego
+urządzenia SCSI jednocześnie (choć bardziej prawdopodobne jest
+wykorzystanie tego przez aplikację do zapamiętania potrzebnych
+urządzeń w haszu).
 
-# %description -l pl # TODO
+Oprócz ogólnej metody execute() jest także wiele innych pomocniczych
+metod, mogących pomóc w odpytywaniu urządzenia i diagnostyce. Należy
+zauważyć, że kozły i czarne świece zwykle wymagane do rozwiązywania
+problemów ze SCSI trzeba sobie zapewnić samemu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
