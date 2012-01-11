@@ -8,13 +8,13 @@
 Summary:	Device::SCSI - Perl module to control SCSI devices
 Summary(pl.UTF-8):	Device::SCSI - moduł Perla do sterowania urządzeniami SCSI
 Name:		perl-Device-SCSI
-Version:	1.003
+Version:	1.004
 Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/MO/MOOLI/Device-SCSI-%{version}.tar.gz
-# Source0-md5:	6d965728811b379b11f144a2caf85d8b
+# Source0-md5:	2c62ed5016d5f377d7870395e1932e5a
 URL:		http://search.cpan.org/dist/Device-SCSI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc Changes README
 %{perl_vendorlib}/Device/*.pm
 %{perl_vendorlib}/Device/SCSI
 %{_mandir}/man3/*
